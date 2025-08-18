@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user-signup-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_signup?createDatabaseIfNotExist=true
+    username: root
+    password: rootpassword
+  jpa:
+    show-sql: true

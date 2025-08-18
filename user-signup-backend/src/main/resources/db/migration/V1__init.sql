@@ -1,0 +1,18 @@
+CREATE TABLE roles
+(
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    type VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE users
+(
+    id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
+    role_id BIGINT NOT NULL,
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
